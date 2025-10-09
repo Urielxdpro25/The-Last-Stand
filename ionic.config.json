@@ -1,0 +1,7 @@
+{
+  "name": "Proyecto UP",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
