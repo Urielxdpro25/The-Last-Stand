@@ -1,7 +1,7 @@
-<ion-header [translucent]="true">
+<!-- <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      The Last Stand
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,35 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">The Last Stand</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-item>
+    <ion-label>Menu</ion-label>
+    <ion-select [(ngModel)]="opcionSeleccionada" interface="popover">
+      <ion-select-option value="opcion1">Astillero</ion-select-option>
+      <ion-select-option value="opcion2">Opción 2</ion-select-option>
+      <ion-select-option value="opcion3">Opción 3</ion-select-option>
+    </ion-select>
+  </ion-item>
+</ion-content> -->
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Juego de Barcos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen>
+  <canvas #gameCanvas></canvas>
+
+  <!-- Ejemplo de Select para opcionSeleccionada -->
+  <ion-item>
+    <ion-label>Opciones</ion-label>
+    <ion-select [(ngModel)]="opcionSeleccionada" placeholder="Selecciona una opción">
+      <ion-select-option value="opcion1">Opción 1</ion-select-option>
+      <ion-select-option value="opcion2">Opción 2</ion-select-option>
+    </ion-select>
+  </ion-item>
 </ion-content>
+
