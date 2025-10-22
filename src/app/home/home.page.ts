@@ -1,4 +1,10 @@
-import { Component, AfterViewInit, ViewChild, ElementRef, HostListener } from '@angular/core';
+import {
+  Component,
+  AfterViewInit,
+  ViewChild,
+  ElementRef,
+  HostListener,
+} from '@angular/core';
 import {
   IonHeader,
   IonToolbar,
@@ -32,19 +38,21 @@ import { FormsModule } from '@angular/forms';
 })
 export class HomePage implements AfterViewInit {
   @ViewChild('gameCanvas', { static: false }) canvasRef!: ElementRef<HTMLCanvasElement>;
-  
+
   opcionSeleccionada: string = '';
 
   private ctx!: CanvasRenderingContext2D;
   private canvas!: HTMLCanvasElement;
 
-  keys: any = {};
+  keys: { [key: string]: boolean } = {};
   playerImg = new Image();
   player = { x: 0, y: 0, width: 60, height: 60 };
   speed = 10;
 
   constructor() {
-    this.playerImg.src = "https://th.bing.com/th/id/OIP.fByU8He0Qj5kKUa7aNitdgHaEJ?w=290&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3";
+    // Imagen de barco
+    this.playerImg.src =
+      'https://th.bing.com/th/id/OIP.fByU8He0Qj5kKUa7aNitdgHaEJ?w=290&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3';
   }
 
   ngAfterViewInit() {
@@ -53,7 +61,11 @@ export class HomePage implements AfterViewInit {
     this.resizeCanvas();
     this.setupEventListeners();
     this.initGame();
-    requestAnimationFrame(() => this.gameLoop());
+
+    // Esperar a que cargue la imagen antes de iniciar el bucle del juego
+    this.playerImg.onload = () => {
+      requestAnimationFrame(() => this.gameLoop());
+    };
   }
 
   @HostListener('window:resize')
@@ -70,6 +82,7 @@ export class HomePage implements AfterViewInit {
     window.addEventListener('keydown', (e) => {
       this.keys[e.key] = true;
     });
+
     window.addEventListener('keyup', (e) => {
       this.keys[e.key] = false;
     });
@@ -88,13 +101,19 @@ export class HomePage implements AfterViewInit {
       this.player.x += this.speed;
     }
 
+    // Limitar movimiento a los bordes del canvas
     if (this.player.x < 0) this.player.x = 0;
-    if (this.player.x + this.player.width > this.canvas.width)
+    if (this.player.x + this.player.width > this.canvas.width) {
       this.player.x = this.canvas.width - this.player.width;
+    }
   }
 
   draw() {
-    this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    // Fondo azul
+    this.ctx.fillStyle = '#007BFF';
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
+
+    // Dibuja el barco
     this.ctx.drawImage(
       this.playerImg,
       this.player.x,
