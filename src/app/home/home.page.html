@@ -4,6 +4,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen>
+<ion-content class="ion-padding" color="light" fullscreen>
   <canvas #gameCanvas></canvas>
+  <div class="comandos">
+    <button (click)="mover('arriba')">↑</button>
+    <button (click)="mover('izquierda')">←</button>
+    <button (click)="mover('abajo')">↓</button>
+    <button (click)="mover('derecha')">→</button>
+    <button (click)="disparar()">🔥 Disparar</button>
+  </div>
+
 </ion-content>

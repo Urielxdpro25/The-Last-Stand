@@ -1,9 +1,23 @@
 canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: #007BFF; // Fondo azul tipo mar
+  display: block;
+  background: #007bff;
   width: 100%;
   height: 100%;
-  display: block;
+}
+
+.comandos {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background: #ffffffaa;
 }
