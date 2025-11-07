@@ -1,4 +1,4 @@
-/* From Uiverse.io by NlghtM4re */ 
+/* From Uiverse.io by NlghtM4re */
 .container {
   position: relative;
   top: 40%;
@@ -23,6 +23,7 @@
 }
 
 @keyframes my-move {
+
   0%,
   100% {
     transform: rotateX(70deg) translateZ(50px) translateY(0px);
@@ -35,7 +36,7 @@
   }
 }
 
-/* From Uiverse.io by AatreyuShau */ 
+/* From Uiverse.io by AatreyuShau */
 .island-backdrop {
   filter: url(#handDrawnNoise);
   --ocean-deep: #194f71;
@@ -49,104 +50,68 @@
   position: absolute;
   inset: 0;
   background-image:
-    radial-gradient(
-      ellipse 8vmin 10vmin at 20% 25%,
+    radial-gradient(ellipse 8vmin 10vmin at 20% 25%,
       var(--land-dark, #2a3d26) 0 70%,
-      transparent 71%
-    ),
+      transparent 71%),
     /* Land */
-      radial-gradient(
-        ellipse 16vmin 12vmin at 20% 25%,
-        var(--land, #3d5c38) 0 70%,
-        transparent 71%
-      ),
+    radial-gradient(ellipse 16vmin 12vmin at 20% 25%,
+      var(--land, #3d5c38) 0 70%,
+      transparent 71%),
     /* Sand */
-      radial-gradient(
-        ellipse 18vmin 14vmin at 20% 25%,
-        var(--dune, #d2b48c) 0 70%,
-        transparent 71%
-      ),
-    radial-gradient(
-      ellipse 20vmin 16vmin at 20% 25%,
+    radial-gradient(ellipse 18vmin 14vmin at 20% 25%,
+      var(--dune, #d2b48c) 0 70%,
+      transparent 71%),
+    radial-gradient(ellipse 20vmin 16vmin at 20% 25%,
       var(--sand, #f2e2b2) 0 70%,
-      transparent 71%
-    ),
+      transparent 71%),
     /* Foam */
-      radial-gradient(
-        ellipse 22vmin 18vmin at 20% 25%,
-        var(--foam, #ffffff88) 0 70%,
-        transparent 71%
-      ),
+    radial-gradient(ellipse 22vmin 18vmin at 20% 25%,
+      var(--foam, #ffffff88) 0 70%,
+      transparent 71%),
     /* Shallow water */
-      radial-gradient(
-        ellipse 24vmin 20vmin at 20% 25%,
-        var(--shallowwater, #4ca3af) 0 70%,
-        transparent 71%
-      ),
+    radial-gradient(ellipse 24vmin 20vmin at 20% 25%,
+      var(--shallowwater, #4ca3af) 0 70%,
+      transparent 71%),
     /* ==== */
-      radial-gradient(
-        ellipse 6vmin 11vmin at 75% 30%,
-        var(--land-dark, #2a3d26) 0 70%,
-        transparent 71%
-      ),
-    radial-gradient(
-      ellipse 17vmin 13vmin at 75% 30%,
+    radial-gradient(ellipse 6vmin 11vmin at 75% 30%,
+      var(--land-dark, #2a3d26) 0 70%,
+      transparent 71%),
+    radial-gradient(ellipse 17vmin 13vmin at 75% 30%,
       var(--land, #3d5c38) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 19vmin 15vmin at 75% 30%,
+      transparent 71%),
+    radial-gradient(ellipse 19vmin 15vmin at 75% 30%,
       var(--dune, #d2b48c) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 21vmin 17vmin at 75% 30%,
+      transparent 71%),
+    radial-gradient(ellipse 21vmin 17vmin at 75% 30%,
       var(--sand, #f2e2b2) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 23vmin 19vmin at 75% 30%,
+      transparent 71%),
+    radial-gradient(ellipse 23vmin 19vmin at 75% 30%,
       var(--foam, #ffffff88) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 25vmin 21vmin at 75% 30%,
+      transparent 71%),
+    radial-gradient(ellipse 25vmin 21vmin at 75% 30%,
       var(--shallowwater, #4ca3af) 0 70%,
-      transparent 71%
-    ),
+      transparent 71%),
     /* ====== */
-      radial-gradient(
-        ellipse 6vmin 10vmin at 50% 75%,
-        var(--land-dark, #2a3d26) 0 70%,
-        transparent 71%
-      ),
-    radial-gradient(
-      ellipse 15vmin 12vmin at 50% 75%,
+    radial-gradient(ellipse 6vmin 10vmin at 50% 75%,
+      var(--land-dark, #2a3d26) 0 70%,
+      transparent 71%),
+    radial-gradient(ellipse 15vmin 12vmin at 50% 75%,
       var(--land, #3d5c38) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 17vmin 14vmin at 50% 75%,
+      transparent 71%),
+    radial-gradient(ellipse 17vmin 14vmin at 50% 75%,
       var(--dune, #d2b48c) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 19vmin 16vmin at 50% 75%,
+      transparent 71%),
+    radial-gradient(ellipse 19vmin 16vmin at 50% 75%,
       var(--sand, #f2e2b2) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 21vmin 18vmin at 50% 75%,
+      transparent 71%),
+    radial-gradient(ellipse 21vmin 18vmin at 50% 75%,
       var(--foam, #ffffff88) 0 70%,
-      transparent 71%
-    ),
-    radial-gradient(
-      ellipse 23vmin 20vmin at 50% 75%,
+      transparent 71%),
+    radial-gradient(ellipse 23vmin 20vmin at 50% 75%,
       var(--shallowwater, #4ca3af) 0 70%,
-      transparent 71%
-    ),
+      transparent 71%),
     /* ======= */
-      linear-gradient(180deg, var(--ocean) 0%, var(--ocean-deep) 80%);
+    linear-gradient(180deg, var(--ocean) 0%, var(--ocean-deep) 80%);
 
   background-repeat: repeat;
 }
@@ -164,6 +129,12 @@
   inset: 0;
   background: linear-gradient(180deg, var(--ocean) 75%, var(--ocean-deep) 100%);
   background-repeat: no-repeat;
+}
+
+.boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .content {
@@ -202,12 +173,12 @@
 }
 
 
-/* From Uiverse.io by sohoning */ 
+/* From Uiverse.io by sohoning */
 .button_01 {
   position: relative;
   font-family: 'Comic Sans MS', cursive;
   align-items: center;
- justify-content:center ;
+  justify-content: center;
   outline: none;
   border: none;
   background-color: #DEB887;
@@ -254,4 +225,95 @@
 
 .button_01:hover .wave {
   top: 0%;
+}
+
+
+
+/* From Uiverse.io by kat_2522 */
+.loader {
+  max-width: fit-content;
+  color: rgb(242, 255, 240);
+  font-size: 50px;
+  font-family: Mine;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.loader span {
+  animation: cut 2s infinite;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.loader:hover {
+  color: #fcffdf;
+}
+
+.loader::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 6px;
+  border-radius: 4px;
+  background-color: #ff828291;
+  top: 0px;
+  filter: blur(10px);
+  animation: scan 2s infinite;
+  left: 0;
+  z-index: 0;
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.loader::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 5px;
+  border-radius: 4px;
+  background-color: #ff8282;
+  top: 0px;
+  animation: scan 2s infinite;
+  left: 0;
+  z-index: 1;
+  filter: opacity(0.9);
+  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+@keyframes scan {
+  0% {
+    top: 0px;
+  }
+
+  25% {
+    top: 54px;
+  }
+
+  50% {
+    top: 0px;
+  }
+
+  75% {
+    top: 54px;
+  }
+}
+
+@keyframes cut {
+  0% {
+    clip-path: inset(0 0 0 0);
+  }
+
+  25% {
+    clip-path: inset(100% 0 0 0);
+  }
+
+  50% {
+    clip-path: inset(0 0 100% 0);
+  }
+
+  75% {
+    clip-path: inset(0 0 0 0);
+  }
 }
