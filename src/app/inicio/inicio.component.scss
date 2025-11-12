@@ -1,40 +1,45 @@
 /* From Uiverse.io by NlghtM4re */
 .container {
-  position: relative;
-  top: 40%;
-  height: 90%;
+  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.h1{
+ display: flex;
+  justify-content: center;
 
-.item {
-  position: absolute;
-  background-color: transparent;
-  width: calc(var(--i) * 2.5vmin);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  border: .9vmin solid rgb(0, 200, 255);
-  transform-style: preserve-3d;
-  transform: rotateX(70deg) translateZ(50px);
-  animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
-  box-shadow: 0px 0px 15px rgb(124, 124, 124),
-    inset 0px 0px 15px rgb(124, 124, 124);
+  padding: 20px;
+
 }
+// multiples anillos azules y rosas
+// .item {
+//   position: absolute;
+//   background-color: transparent;
+//   width: calc(var(--i) * 2.5vmin);
+//   aspect-ratio: 1;
+//   border-radius: 50%;
+//   border: .9vmin solid rgb(0, 200, 255);
+//   transform-style: preserve-3d;
+//   transform: rotateX(70deg) translateZ(50px);
+//   animation: my-move 3s ease-in-out calc(var(--i) * 0.08s) infinite;
+//   box-shadow: 0px 0px 15px rgb(124, 124, 124),
+//     inset 0px 0px 15px rgb(124, 124, 124);
+// }
 
-@keyframes my-move {
+// @keyframes my-move {
 
-  0%,
-  100% {
-    transform: rotateX(70deg) translateZ(50px) translateY(0px);
-    filter: hue-rotate(0deg);
-  }
+//   0%,
+//   100% {
+//     transform: rotateX(70deg) translateZ(50px) translateY(0px);
+//     filter: hue-rotate(0deg);
+//   }
 
-  50% {
-    transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
-    filter: hue-rotate(180deg);
-  }
-}
+//   50% {
+//     transform: rotateX(70deg) translateZ(50px) translateY(-50vmin);
+//     filter: hue-rotate(180deg);
+//   }
+// }
 
 /* From Uiverse.io by AatreyuShau */
 .island-backdrop {
@@ -229,91 +234,94 @@
 
 
 
-/* From Uiverse.io by kat_2522 */
-.loader {
-  max-width: fit-content;
-  color: rgb(242, 255, 240);
-  font-size: 50px;
-  font-family: Mine;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-style: italic;
-  font-weight: 600;
-}
+// /* From Uiverse.io by kat_2522 */
+// .loader {
+//   top: 40%;
+//   height: 90%;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   max-width: fit-content;
+//   color: rgb(242, 255, 240);
+//   font-size: 50px;
+//   font-family: Mine;
+//   position: relative;
+//   display: flex;
+//   font-style: italic;
+//   font-weight: 600;
+// }
 
-.loader span {
-  animation: cut 2s infinite;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+// .loader span {
+//   animation: cut 2s infinite;
+//   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+// }
 
-.loader:hover {
-  color: #fcffdf;
-}
+// .loader:hover {
+//   color: #fcffdf;
+// }
 
-.loader::after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 6px;
-  border-radius: 4px;
-  background-color: #ff828291;
-  top: 0px;
-  filter: blur(10px);
-  animation: scan 2s infinite;
-  left: 0;
-  z-index: 0;
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+// .loader::after {
+//   position: absolute;
+//   content: "";
+//   width: 100%;
+//   height: 6px;
+//   border-radius: 4px;
+//   background-color: #ff828291;
+//   top: 0px;
+//   filter: blur(10px);
+//   animation: scan 2s infinite;
+//   left: 0;
+//   z-index: 0;
+//   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+// }
 
-.loader::before {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 5px;
-  border-radius: 4px;
-  background-color: #ff8282;
-  top: 0px;
-  animation: scan 2s infinite;
-  left: 0;
-  z-index: 1;
-  filter: opacity(0.9);
-  transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
+// .loader::before {
+//   position: absolute;
+//   content: "";
+//   width: 100%;
+//   height: 5px;
+//   border-radius: 4px;
+//   background-color: #ff8282;
+//   top: 0px;
+//   animation: scan 2s infinite;
+//   left: 0;
+//   z-index: 1;
+//   filter: opacity(0.9);
+//   transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+// }
 
-@keyframes scan {
-  0% {
-    top: 0px;
-  }
+// @keyframes scan {
+//   0% {
+//     top: 0px;
+//   }
 
-  25% {
-    top: 54px;
-  }
+//   25% {
+//     top: 54px;
+//   }
 
-  50% {
-    top: 0px;
-  }
+//   50% {
+//     top: 0px;
+//   }
 
-  75% {
-    top: 54px;
-  }
-}
+//   75% {
+//     top: 54px;
+//   }
+// }
 
-@keyframes cut {
-  0% {
-    clip-path: inset(0 0 0 0);
-  }
+// @keyframes cut {
+//   0% {
+//     clip-path: inset(0 0 0 0);
+//   }
 
-  25% {
-    clip-path: inset(100% 0 0 0);
-  }
+//   25% {
+//     clip-path: inset(100% 0 0 0);
+//   }
 
-  50% {
-    clip-path: inset(0 0 100% 0);
-  }
+//   50% {
+//     clip-path: inset(0 0 100% 0);
+//   }
 
-  75% {
-    clip-path: inset(0 0 0 0);
-  }
-}
+//   75% {
+//     clip-path: inset(0 0 0 0);
+//   }
+// }
